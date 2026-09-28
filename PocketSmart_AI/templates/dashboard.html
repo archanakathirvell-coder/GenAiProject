@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Welcome, {{ user }}</h1>
+<h2>Recommendation History</h2>
+{% if history %}
+  {% for item in history|reverse %}
+  <div class="result">
+    <h3>{{ item.type }} Planner</h3>
+    <pre>{{ item.result | tojson(indent=2) }}</pre>
+  </div>
+  {% endfor %}
+{% else %}
+  <p>No recommendations yet.</p>
+{% endif %}
+{% endblock %}

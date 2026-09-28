@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="form-box">
+<h2>Party Budget Planner</h2>
+<form id="partyForm">
+<input name="budget" type="number" min="1" placeholder="Total budget (₹)" required>
+<input name="guests" type="number" min="1" placeholder="Number of guests" required>
+<input name="event_type" placeholder="Event type, e.g. birthday" required>
+<input name="venue" placeholder="Venue preference">
+<input name="location" placeholder="Location">
+<button>Generate Recommendations</button>
+</form>
+<div id="result"></div>
+</div>
+{% endblock %}

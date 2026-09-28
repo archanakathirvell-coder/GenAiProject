@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="form-box">
+<h2>Home Interior Budget Planner</h2>
+<form id="homeForm">
+<input name="budget" type="number" min="1" placeholder="Total budget (₹)" required>
+<input name="rooms" placeholder="Rooms, e.g. Living Room, Bedroom" required>
+<textarea name="requirements" placeholder="Items and quantities"></textarea>
+<input name="style" placeholder="Style, e.g. modern, minimal"></input>
+<button>Generate Recommendations</button>
+</form>
+<div id="result"></div>
+</div>
+{% endblock %}

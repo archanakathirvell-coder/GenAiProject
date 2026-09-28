@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="form-box">
+<h2>Jewelry Budget Planner</h2>
+<form id="jewelryForm" enctype="multipart/form-data">
+<input name="budget" type="number" min="1" placeholder="Budget (₹)" required>
+<input name="occasion" placeholder="Occasion, e.g. wedding" required>
+<input name="style" placeholder="Style preference, e.g. traditional">
+<textarea name="outfit_description" placeholder="Describe outfit colors/style"></textarea>
+<label>Optional outfit image</label>
+<input name="outfit_image" type="file" accept="image/*">
+<button>Generate Recommendations</button>
+</form>
+<div id="result"></div>
+</div>
+{% endblock %}
